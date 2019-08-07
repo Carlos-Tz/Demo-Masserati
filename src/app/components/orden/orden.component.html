@@ -24,7 +24,7 @@
               </form>
               <p style="font-size: 1.1em;">No. de Reporte <input type="number" style="width: 3cm;"
                   [(ngModel)]="form_.reporte"></p>
-              <div class="no-print" style="width: 6cm; height: 4mm; background-color: #9cc3f0;"><b>STAND BY</b></div>
+              <div class="no-print" style="width: 6cm; height: 4mm; background-color: #dcebfb;"><b>{{ form_.estado }}</b></div>
             </td>
           </tr>
         </table>
@@ -96,37 +96,37 @@
 
         <table>
           <tr>
-            <td style="width: 2.51cm;" (click)="gnp();">
-              <img *ngIf="!gn" style="width:70%;" src="assets/gnp2.jpg">
-              <img *ngIf="gn" style="width:70%;" src="assets/gnp.png">
+            <td style="width: 2.88cm; cursor: pointer;" (click)="gnp();">
+              <img *ngIf="!gn" style="width:55%;" src="assets/gnp2.jpg">
+              <img *ngIf="gn" style="width:55%;" src="assets/gnp.png">
             </td>
-            <td style="width: 2.51cm;" (click)="axa();">
-              <img *ngIf="!ax" style="width:70%;" src="assets/axa2.jpg">
-              <img *ngIf="ax" style="width:70%;" src="assets/axa.png">
+            <td style="width: 2.88cm; cursor: pointer;" (click)="axa();">
+              <img *ngIf="!ax" style="width:55%;" src="assets/axa2.jpg">
+              <img *ngIf="ax" style="width:55%;" src="assets/axa.png">
             </td>
-            <td style="width: 2.51cm;" (click)="qualitas();">
-              <img *ngIf="!qua" style="width:70%;" src="assets/qualitas2.jpg">
-              <img *ngIf="qua" style="width:70%;" src="assets/qualitas.jpg">
+            <td style="width: 2.88cm; cursor: pointer;" (click)="qualitas();">
+              <img *ngIf="!qua" style="width:55%;" src="assets/qualitas2.jpg">
+              <img *ngIf="qua" style="width:55%;" src="assets/qualitas.jpg">
             </td>
-            <td style="width: 2.51cm;" (click)="pavel();">
-              <img *ngIf="!pav" style="width:70%;" src="assets/pavel2.png">
-              <img *ngIf="pav" style="width:70%;" src="assets/pavel.png">
+            <!-- <td style="width: 2.88cm; cursor: pointer;" (click)="pavel();">
+              <img *ngIf="!pav" style="width:55%;" src="assets/pavel2.png">
+              <img *ngIf="pav" style="width:55%;" src="assets/pavel.png">
+            </td> -->
+            <td style="width: 2.88cm; cursor: pointer;" (click)="audi();">
+              <img *ngIf="!aud" style="width:55%;" src="assets/audi2.jpg">
+              <img *ngIf="aud" style="width:55%;" src="assets/audi.png">
             </td>
-            <td style="width: 2.51cm;" (click)="audi();">
-              <img *ngIf="!aud" style="width:70%;" src="assets/audi2.jpg">
-              <img *ngIf="aud" style="width:70%;" src="assets/audi.png">
+            <td style="width: 2.88cm; cursor: pointer;" (click)="mb();">
+              <img *ngIf="!mb_" style="width:55%;" src="assets/mb.png">
+              <img *ngIf="mb_" style="width:55%;" src="assets/mb2.png">
             </td>
-            <td style="width: 2.51cm;" (click)="mb();">
-              <img *ngIf="!mb_" style="width:70%;" src="assets/mb.png">
-              <img *ngIf="mb_" style="width:70%;" src="assets/mb2.png">
+            <td style="width: 2.88cm; cursor: pointer;" (click)="mazda();">
+              <img *ngIf="!maz" style="width:55%;" src="assets/mazda2.jpg">
+              <img *ngIf="maz" style="width:55%;" src="assets/mazda.png">
             </td>
-            <td style="width: 2.51cm;" (click)="mazda();">
-              <img *ngIf="!maz" style="width:70%;" src="assets/mazda2.jpg">
-              <img *ngIf="maz" style="width:70%;" src="assets/mazda.png">
-            </td>
-            <td style="width: 2.51cm;" (click)="povet();">
-              <img *ngIf="!pov" style="width:70%;" src="assets/povet2.jpg">
-              <img *ngIf="pov" style="width:70%;" src="assets/povet.png">
+            <td style="width: 2.88cm; cursor: pointer;" (click)="povet();">              
+              <a href="https://didocu.com/masserati/povet" target="_blank" rel="noopener"><img *ngIf="!pov" style="width:55%;" src="assets/povet2.jpg"></a>
+              <img *ngIf="pov" style="width:55%;" src="assets/povet.png">
             </td>
           </tr>
         </table>
@@ -413,21 +413,21 @@
                         [(ngModel)]="form_.gas" />
                     </div>
                   </td>
-                  <td style="width: 1.5cm;" (click)="airbag()">
+                  <td style="width: 1.5cm; cursor: pointer;" (click)="airbag()">
                     <img *ngIf="!air" style="width: 95%;" src="assets/airbag1.jpg" alt="">
                     <img *ngIf="air" style="width: 95%;" src="assets/airbag2.jpg" alt="">
                   </td>
-                  <td style="width: 1.5cm;" (click)="engine()">
+                  <td style="width: 1.5cm; cursor: pointer;" (click)="engine()">
                     <img *ngIf="!eng" style="width: 95%;" src="assets/engine1.jpg" alt="">
                     <img *ngIf="eng" style="width: 95%;" src="assets/engine2.jpg" alt="">
                   </td>
                 </tr>
                 <tr>
-                  <td (click)="abs_()">
+                  <td style="cursor: pointer;" (click)="abs_()">
                     <img *ngIf="!abs" style="width: 95%;" src="assets/ABS1.jpg" alt="">
                     <img *ngIf="abs" style="width: 95%;" src="assets/ABS2.jpg" alt="">
                   </td>
-                  <td (click)="oil_()">
+                  <td style="cursor: pointer;" (click)="oil_()">
                     <img *ngIf="!oil" style="width: 95%;" src="assets/oil1.jpg" alt="">
                     <img *ngIf="oil" style="width: 95%;" src="assets/oil2.jpg" alt="">
                   </td>
@@ -597,7 +597,7 @@
                   <th style="letter-spacing: .1em;">total aproximado</th>
                 </tr>
                 <tr>
-                  <td><input type="text" style="font-weight: 700;" [(ngModel)]="total"></td>
+                  <td><input type="text" style="font-weight: 700;" [(ngModel)]="form_.total"></td>
                 </tr>
               </table>
             </td>
@@ -662,401 +662,12 @@
     </div>
   </section>
 
-  <section>
-    <div class="page" id="pag_2">
-      <div class="inner">
-        <div class="section6">
-          <h3 id="sub_title">ESTADO DEL VEHÍCULO</h3>
-          <div class="table">
-            <div class="tr thead">
-              <div class="td">Imagen</div>
-              <div class="td">Proceso</div>
-            </div>
-            <div class="tr">
-              <div class="td">
-                <div class="image-container" id="ci1">
-                  <input type="file" accept="image/*" id="im1" name="img1" onchange="showMyImage(this)"
-                    (change)="changeListener($event)">
-                </div>
-              </div>
-              <div class="td ">
-                <h6>Hojalatería</h6>
-                <table>
-                  <tr>
-                    <td>
-                      <p>Inicio: {{ form_.hinicio }}</p>
-                    </td>
-                    <td rowspan="2">
-                      <h5>{{ form_.htiempo }}</h5>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <p>Termino: {{ form_.hfin }}</p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td colspan="2">
-                      <p style="font-size: 1.1em;">Nombre: <input type="text" style="width: 5cm;"
-                          [(ngModel)]="form_.hnombre" placeholder="Ej. ALEX"></p>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="signatureM">
-                        <div id="contSign5" onclick="btn_click5()">
-                          <img src="" id="imgSign5" (load)="imgChanged5($event)">
-                        </div>
-                        <hr>
-                      </div>
-                      <p>Recibido</p>
-                      <button class="waves-effect waves-light btn-small grey">Aceptar</button>
-                    </td>
-                    <td>
-                      <div class="signatureM">
-                        <div id="contSign6" onclick="btn_click6()">
-                          <img src="" id="imgSign6" (load)="imgChanged6($event)">
-                        </div>
-                        <hr>
-                      </div>
-                      <p>Terminado</p>
-                      <button class="waves-effect waves-light btn-small grey">Aceptar</button>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-            </div>
-            <div class="tr">
-              <div class="td">
-                <div class="image-container" id="ci2">
-                  <input type="file" accept="image/*" id="im2" name="img2" onchange="showMyImage(this)"
-                    (change)="changeListener($event)">
-                </div>
-              </div>
-              <div class="td ">
-                <h6>Preparación</h6>
-                  <table>
-                      <tr>
-                        <td>
-                          <p>Inicio: {{ form_.pinicio }}</p>
-                        </td>
-                        <td rowspan="2">
-                          <h5>{{ form_.ptiempo }}</h5>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <p>Termino: {{ form_.pfin }}</p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td colspan="2">
-                          <p style="font-size: 1.1em;">Nombre: <input type="text" style="width: 5cm;"
-                              [(ngModel)]="form_.pnombre" placeholder="Ej. ALEX"></p>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="signatureM">
-                            <div id="contSign7">
-                              <img src="" id="imgSign7" (load)="imgChanged5($event)">
-                            </div>
-                            <hr>
-                          </div>
-                          <p>Recibido</p>
-                          <button class="waves-effect waves-light btn-small grey">Aceptar</button>
-                        </td>
-                        <td>
-                          <div class="signatureM">
-                            <div id="contSign8">
-                              <img src="" id="imgSign8" (load)="imgChanged6($event)">
-                            </div>
-                            <hr>
-                          </div>
-                          <p>Terminado</p>
-                          <button class="waves-effect waves-light btn-small grey">Aceptar</button>
-                        </td>
-                      </tr>
-                    </table>
-              </div>
-            </div>
-            <div class="tr">
-              <div class="td">
-                <div class="image-container" id="ci3">
-                  <input type="file" accept="image/*" id="im3" name="img3" onchange="showMyImage(this)"
-                    (change)="changeListener($event)">
-                </div>
-              </div>
-              <div class="td ">
-                <h6>Pintura</h6>
-                <table>
-                    <tr>
-                      <td>
-                        <p>Inicio: {{ form_.piinicio }}</p>
-                      </td>
-                      <td rowspan="2">
-                        <h5>{{ form_.pitiempo }}</h5>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p>Termino: {{ form_.pifin }}</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2">
-                        <p style="font-size: 1.1em;">Nombre: <input type="text" style="width: 5cm;"
-                            [(ngModel)]="form_.pinombre" placeholder="Ej. ALEX"></p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="signatureM">
-                          <div id="contSign9">
-                            <img src="" id="imgSign9" (load)="imgChanged5($event)">
-                          </div>
-                          <hr>
-                        </div>
-                        <p>Recibido</p>
-                        <button class="waves-effect waves-light btn-small grey">Aceptar</button>
-                      </td>
-                      <td>
-                        <div class="signatureM">
-                          <div id="contSign10">
-                            <img src="" id="imgSign10" (load)="imgChanged6($event)">
-                          </div>
-                          <hr>
-                        </div>
-                        <p>Terminado</p>
-                        <button class="waves-effect waves-light btn-small grey">Aceptar</button>
-                      </td>
-                    </tr>
-                  </table>
-              </div>
-            </div>
-            <div class="tr">
-              <div class="td ">
-                <div class="image-container" id="ci4">
-                  <input type="file" accept="image/*" id="im4" name="img4" onchange="showMyImage(this)"
-                    (change)="changeListener($event)">
-                </div>
-              </div>
-              <div class="td">
-                <h6>Pulido</h6>
-                <table>
-                    <tr>
-                      <td>
-                        <p>Inicio: {{ form_.puinicio }}</p>
-                      </td>
-                      <td rowspan="2">
-                        <h5>{{ form_.putiempo }}</h5>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p>Termino: {{ form_.pufin }}</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2">
-                        <p style="font-size: 1.1em;">Nombre: <input type="text" style="width: 5cm;"
-                            [(ngModel)]="form_.punombre" placeholder="Ej. ALEX"></p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="signatureM">
-                          <div id="contSign11">
-                            <img src="" id="imgSign11" (load)="imgChanged5($event)">
-                          </div>
-                          <hr>
-                        </div>
-                        <p>Recibido</p>
-                        <button class="waves-effect waves-light btn-small grey">Aceptar</button>
-                      </td>
-                      <td>
-                        <div class="signatureM">
-                          <div id="contSign12">
-                            <img src="" id="imgSign12" (load)="imgChanged6($event)">
-                          </div>
-                          <hr>
-                        </div>
-                        <p>Terminado</p>
-                        <button class="waves-effect waves-light btn-small grey">Aceptar</button>
-                      </td>
-                    </tr>
-                  </table>
-              </div>
-            </div>
-            <div class="tr">
-              <div class="td">
-                <div class="image-container" id="ci5">
-                  <input type="file" accept="image/*" id="im5" name="img5" onchange="showMyImage(this)"
-                    (change)="changeListener($event)">
-                </div>
-              </div>
-              <div class="td ">
-                <h6>Armado</h6>
-                <table>
-                    <tr>
-                      <td>
-                        <p>Inicio: {{ form_.ainicio }}</p>
-                      </td>
-                      <td rowspan="2">
-                        <h5>{{ form_.atiempo }}</h5>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p>Termino: {{ form_.afin }}</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2">
-                        <p style="font-size: 1.1em;">Nombre: <input type="text" style="width: 5cm;"
-                            [(ngModel)]="form_.anombre" placeholder="Ej. ALEX"></p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="signatureM">
-                          <div id="contSign13">
-                            <img src="" id="imgSign13" (load)="imgChanged5($event)">
-                          </div>
-                          <hr>
-                        </div>
-                        <p>Recibido</p>
-                        <button class="waves-effect waves-light btn-small grey">Aceptar</button>
-                      </td>
-                      <td>
-                        <div class="signatureM">
-                          <div id="contSign14">
-                            <img src="" id="imgSign14" (load)="imgChanged6($event)">
-                          </div>
-                          <hr>
-                        </div>
-                        <p>Terminado</p>
-                        <button class="waves-effect waves-light btn-small grey">Aceptar</button>
-                      </td>
-                    </tr>
-                  </table>
-              </div>
-            </div>
-            <div class="tr">
-              <div class="td">
-                <div class="image-container" id="ci6">
-                  <input type="file" accept="image/*" id="im6" name="img6" onchange="showMyImage(this)"
-                    (change)="changeListener($event)">
-                </div>
-              </div>
-              <div class="td ">
-                <h6>Limpieza</h6>
-                <table>
-                    <tr>
-                      <td>
-                        <p>Inicio: {{ form_.linicio }}</p>
-                      </td>
-                      <td rowspan="2">
-                        <h5>{{ form_.ltiempo }}</h5>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <p>Termino: {{ form_.lfin }}</p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2">
-                        <p style="font-size: 1.1em;">Nombre: <input type="text" style="width: 5cm;"
-                            [(ngModel)]="form_.lnombre" placeholder="Ej. ALEX"></p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="signatureM">
-                          <div id="contSign15">
-                            <img src="" id="imgSign15" (load)="imgChanged5($event)">
-                          </div>
-                          <hr>
-                        </div>
-                        <p>Recibido</p>
-                        <button class="waves-effect waves-light btn-small grey">Aceptar</button>
-                      </td>
-                      <td>
-                        <div class="signatureM">
-                          <div id="contSign16">
-                            <img src="" id="imgSign16" (load)="imgChanged6($event)">
-                          </div>
-                          <hr>
-                        </div>
-                        <p>Terminado</p>
-                        <button class="waves-effect waves-light btn-small grey">Aceptar</button>
-                      </td>
-                    </tr>
-                  </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- <div class="no-print" id="printBtn" onclick="pdf()"> -->
+  
   <div class="no-print" id="printBtn" onclick="window.print()">
-    <img src="assets/save.png" alt="" width="75" height="75">
-  </div>
-
-  <!-- <section>
-      <div class="page" id="pag_3">
-        <div class="inner">
-          <div class="section6">
-            <h3 id="sub_title">ESTADO DEL VEHÍCULO HOJA 2</h3><br><br>
-            <div class="table">
-              <div class="tr thead">
-                <div class="td">Imagen</div>
-                <div class="td ">Descripción</div>
-              </div>
-              <div class="tr">
-                <div class="td">
-                  <div class="image-container" id="ci5">
-                    <input type="file" accept="image/*" id="im5" name="img5" onchange="showMyImage(this)"
-                      (change)="changeListener($event)">
-                  </div>
-                </div>
-                <div class="td "><textarea name="img5d" id="txa" rows="14" wrap="soft" [(ngModel)]="form_.desc5"></textarea></div>
-              </div>
-              <div class="tr">
-                <div class="td">
-                  <div class="image-container" id="ci6">
-                    <input type="file" accept="image/*" id="im6" name="img6" onchange="showMyImage(this)"
-                      (change)="changeListener($event)">
-                  </div>
-                </div>
-                <div class="td "><textarea name="img6d" id="txa" rows="14" wrap="soft" [(ngModel)]="form_.desc6"></textarea></div>
-              </div>
-              <div class="tr">
-                <div class="td">
-                  <div class="image-container" id="ci7">
-                    <input type="file" accept="image/*" id="im7" name="img7" onchange="showMyImage(this)"
-                      (change)="changeListener($event)">
-                  </div>
-                </div>
-                <div class="td "><textarea name="img7d" id="txa" rows="14" wrap="soft" [(ngModel)]="form_.desc7"></textarea></div>
-              </div>
-              <div class="tr">
-                <div class="td ">
-                  <div class="image-container" id="ci8">
-                    <input type="file" accept="image/*" id="im8" name="img8" onchange="showMyImage(this)"
-                      (change)="changeListener($event)">
-                  </div>
-                </div>
-                <div class="td  "><textarea name="img8d" id="txa" rows="14" wrap="soft" [(ngModel)]="form_.desc8"></textarea></div>
-              </div>
-            </div>
-          </div>
+      <img src="assets/print.svg" alt="" width="55" height="55">
+    </div>
+    
+    <!-- <div class="no-print" id="printBtn" onclick="pdf()"> -->
 
 
-        </div>
-      </div>
-    </section> -->
 </div>

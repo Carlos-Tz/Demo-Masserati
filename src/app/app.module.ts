@@ -8,7 +8,6 @@ import { PanelComponent } from './components/panel/panel.component';
 import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { OrdenComponent } from './components/orden/orden.component';
-import { ViewOrdenComponent } from './components/view-orden/view-orden.component';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from 'src/environments/environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -20,7 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { DataTablesModule } from 'angular-datatables';
 import { Ng2ImgMaxModule } from 'ng2-img-max';
-import { EditComponent } from './components/edit/edit.component';
+import { EditOrdenComponent } from './components/edit-orden/edit-orden.component';
+import { PovetComponent } from './components/povet/povet.component';
 
 @NgModule({
   declarations: [
@@ -29,8 +29,8 @@ import { EditComponent } from './components/edit/edit.component';
     LoginComponent,
     NavbarComponent,
     OrdenComponent,
-    ViewOrdenComponent,
-    EditComponent
+    EditOrdenComponent,
+    PovetComponent
   ],
   imports: [
     BrowserModule,

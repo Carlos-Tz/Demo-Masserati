@@ -40,6 +40,7 @@ export class OrdenComponent implements OnInit {
   public eng = false;
   public abs = false;
   public oil = false;
+  public hr1 = false;
 
   @ViewChild('sig1') signaturePad: SignaturePad;
   @ViewChild('sig2') signaturePad2: SignaturePad;
@@ -59,7 +60,7 @@ export class OrdenComponent implements OnInit {
   form_ = {
     orden: null,
     reporte: null,
-    estado: '',
+    estado: 'RECEPCIÓN',
     marca: '',
     modelo: '',
     color: '',
@@ -178,40 +179,63 @@ export class OrdenComponent implements OnInit {
     img8: '',
     hinicio: '',
     hfin: '',
-    htiempo: '00:00',
+    htiempo: false,
     hnombre: '',
     hfirma1: '',
     hfirma2: '',
     pinicio: '',
     pfin: '',
-    ptiempo: '00:00',
+    ptiempo: false,
     pnombre: '',
     pfirma1: '',
     pfirma2: '',
     piinicio: '',
     pifin: '',
-    pitiempo: '00:00',
+    pitiempo: false,
     pinombre: '',
     pifirma1: '',
     pifirma2: '',
     puinicio: '',
     pufin: '',
-    putiempo: '00:00',
+    putiempo: false,
     punombre: '',
     pufirma1: '',
     pufirma2: '',
     ainicio: '',
     afin: '',
-    atiempo: '00:00',
+    atiempo: false,
     anombre: '',
     afirma1: '',
     afirma2: '',
     linicio: '',
     lfin: '',
-    ltiempo: '00:00',
+    ltiempo: false,
     lnombre: '',
     lfirma1: '',
-    lfirma2: ''
+    lfirma2: '',
+    proceso: {
+      re: true,
+      ho: false,
+      pr: false,
+      pi: false,
+      pu: false,
+      ar: false,
+      li: false,
+      te: false,
+      sb: false
+    },
+    tiempoh1: null,
+    tiempoh2: null,
+    tiempopr1: null,
+    tiempopr2: null,
+    tiempopi1: null,
+    tiempopi2: null,
+    tiempopu1: null,
+    tiempopu2: null,
+    tiempoa1: null,
+    tiempoa2: null,
+    tiempol1: null,
+    tiempol2: null
   };
 
   constructor(
@@ -233,6 +257,9 @@ export class OrdenComponent implements OnInit {
   }
 
   submitSurveyData = () => {
+    if (this.form_.sini) {
+      this.form_.sini = this.form_.sini.toUpperCase();
+    }
     this.formApi.AddForm(this.form_);
     this.toastr.success('Guardado!');
     this.ax = false;
@@ -375,40 +402,63 @@ export class OrdenComponent implements OnInit {
       img8: '',
       hinicio: '',
       hfin: '',
-      htiempo: '00:00',
+      htiempo: false,
       hnombre: '',
       hfirma1: '',
       hfirma2: '',
       pinicio: '',
       pfin: '',
-      ptiempo: '00:00',
+      ptiempo: false,
       pnombre: '',
       pfirma1: '',
       pfirma2: '',
       piinicio: '',
       pifin: '',
-      pitiempo: '00:00',
+      pitiempo: false,
       pinombre: '',
       pifirma1: '',
       pifirma2: '',
       puinicio: '',
       pufin: '',
-      putiempo: '00:00',
+      putiempo: false,
       punombre: '',
       pufirma1: '',
       pufirma2: '',
       ainicio: '',
       afin: '',
-      atiempo: '00:00',
+      atiempo: false,
       anombre: '',
       afirma1: '',
       afirma2: '',
       linicio: '',
       lfin: '',
-      ltiempo: '00:00',
+      ltiempo: false,
       lnombre: '',
       lfirma1: '',
-      lfirma2: ''
+      lfirma2: '',
+      proceso: {
+        re: true,
+        ho: false,
+        pr: false,
+        pi: false,
+        pu: false,
+        ar: false,
+        li: false,
+        te: false,
+        sb: false
+      },
+      tiempoh1: null,
+      tiempoh2: null,
+      tiempopr1: null,
+      tiempopr2: null,
+      tiempopi1: null,
+      tiempopi2: null,
+      tiempopu1: null,
+      tiempopu2: null,
+      tiempoa1: null,
+      tiempoa2: null,
+      tiempol1: null,
+      tiempol2: null
     };
   }
 
@@ -435,6 +485,9 @@ export class OrdenComponent implements OnInit {
   }
   imgChanged5($event) {
     this.form_.hfirma1 = $event.target.src;
+    if (this.form_.hfirma1) {
+      console.log(this.form_.hfirma1);
+    }
   }
   imgChanged6($event) {
     this.form_.hfirma2 = $event.target.src;
